@@ -1,4 +1,4 @@
-# Guide d'encodage du roman-feuilleton La vieille fille, écrit par Honoré de Balzac en 1836.
+# Guide d'encodage du roman-feuilleton _La vieille fille_, écrit par Honoré de Balzac en 1836.
 
 ## 1. Projet éditorial et exploitations possibles
 
