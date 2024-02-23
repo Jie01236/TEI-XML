@@ -3,6 +3,11 @@
 ## 1. Projet éditorial et exploitations possibles
 
 ### 1.1. Objectifs de l'édition de la La vieille fille
+Ce document vise à expliquer comment l'œuvre mentionnée a été encodée en XML-TEI, ainsi que les objectifs de ce schéma d'encodage. Cet ODD (One Document Does it all) vise à établir des principes d'encodage stricts, afin de générer un guide personnalisé et spécifique à ce feuilleton.
+
+Ce modèle est axé sur le codage du contenu littéraire de La vieille fille. Ainsi, les éléments typographiques propres à l'édition ont été délibérément exclus.
+
+Cet encodage XML/TEI ne déclare pas d'entités donc aucune DTD n'a été créée. Le schéma d'encodage est conçu pour fournir des données permettant une meilleure compréhension de la structure de l'œuvre encodée, ainsi que de la manière dont l'auteur a conçu les personnages, par exemple leurs caractères et habitudes respectifs, les relations entre eux et le contexte culturel de l'époque.
 
 ### 1.2. Exploitations possibles de l'encodage
 
