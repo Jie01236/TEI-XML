@@ -3,6 +3,7 @@
 ## 1. Projet éditorial et exploitations possibles
 
 ### 1.1. Objectifs de l'édition de la La vieille fille
+
 Ce document vise à expliquer comment l'œuvre mentionnée a été encodée en XML-TEI, ainsi que les objectifs de ce schéma d'encodage. Cet ODD (One Document Does it all) vise à établir des principes d'encodage stricts, afin de générer un guide personnalisé et spécifique à ce feuilleton.
 
 Ce modèle est axé sur le codage du contenu littéraire de La vieille fille. Ainsi, les éléments typographiques propres à l'édition ont été délibérément exclus.
@@ -44,3 +45,8 @@ Cet encodage XML/TEI ne déclare pas d'entités donc aucune DTD n'a été créé
 ### 1.4.3. Analyse des dialogues
 
 ## 2. Règles de validation
+
+Définir des règles fonctionnelles, documentées et justifiée par le projet éditorial :
+•Une regle contraignant I'usage d'un attribut et sa ou ses valeurs ( <attDef>）;
+• Une règle contraignant l'enchaînement de certains éléments («content> ) ;
+• Une règle contraignant la valeur d'un attribut ou l'usage d'un élément ou d'un attribut en fonction de son environnement ( <constraint> + ‹s:rule> ) ).
