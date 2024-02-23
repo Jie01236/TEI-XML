@@ -47,6 +47,6 @@ Cet encodage XML/TEI ne déclare pas d'entités donc aucune DTD n'a été créé
 ## 2. Règles de validation
 
 Définir des règles fonctionnelles, documentées et justifiée par le projet éditorial :
-+ Une regle contraignant I'usage d'un attribut et sa ou ses valeurs ( <attDef>）;
-+ Une règle contraignant l'enchaînement de certains éléments («content> ) ;
-+ Une règle contraignant la valeur d'un attribut ou l'usage d'un élément ou d'un attribut en fonction de son environnement ( <constraint> + ‹s:rule> ) ).
++ Une regle contraignant I'usage d'un attribut et sa ou ses valeurs => <attDef>;
++ Une règle contraignant l'enchaînement de certains éléments => <content>  ;
++ Une règle contraignant la valeur d'un attribut ou l'usage d'un élément ou d'un attribut en fonction de son environnement => <constraint> + <s:rule> .
