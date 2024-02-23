@@ -17,31 +17,9 @@ Cet encodage XML/TEI ne déclare pas d'entités donc aucune DTD n'a été créé
 
 #### 1.2.1.1. Le fileDesc
 
-##### 1.2.1.1.1. Le seriesStmt
-
-##### 1.2.1.1.2. Le notesStmt
-
-##### 1.2.1.1.3. Le sourceDesc
-
 #### 1.2.1.2. Le encodingDesc
 
-##### 1.2.1.2.1. Le editorialDecl
-
-##### 1.2.1.2.2. Le tagsDecl
-
 #### 1.2.1.3. Le profileDesc
-
-##### 1.2.1.3.1. Le settingDesc
-
-###### 1.2.1.3.1.1. La liste des lieux
-
-##### 1.2.1.3.2. Le particDesc
-
-###### 1.2.1.3.2.1. La liste des personnes
-
-###### 1.2.1.3.2.2. La liste des organisations
-
-##### 1.2.1.3.3. Le textClass
 
 ## 1.3. Le text
 
@@ -50,16 +28,6 @@ Cet encodage XML/TEI ne déclare pas d'entités donc aucune DTD n'a été créé
 #### 1.3.1.1. Structure du texte
 
 #### 1.3.1.2. Normalisation du texte
-
-##### 1.3.1.2.1. Normalisation des mots
-
-###### 1.3.1.2.1.1. les différentes formes d'un même mot
-
-###### 1.3.1.2.1.2. les mots en italique
-
-###### 1.3.1.2.1.3. les mots étrangères
-
-##### 1.3.1.2.2. Outils pour compenser une analyse incomplète
 
 ## 1.4. L'analyse littéraire
 
