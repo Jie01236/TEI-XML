@@ -8,7 +8,7 @@
             <title type="sub">Schéma créé avec Oddbyexample</title>
          </titleStmt>
          <publicationStmt>
-            <p>Edition encodée par Jie FAN, d'après Honoré de Balzac, La vieille fille.  Cette
+            <p>Edition encodée par Jie FAN, d'après Honoré de Balzac, La vieille fille. Cette
                édition électronique est basée sur les épisodes consécutifs de "La vieille fille"
                publiés dans "La Presse" les <date>23, 24 et 25 octobre 1836</date>, respectivement
                sous les numéros 103, 104 et 105 de la publication. Ces versions numérisées sont
@@ -18,9 +18,8 @@
                trois épisodes.</p>
          </publicationStmt>
          <sourceDesc>
-            <p>Dérivé du <ref
-                  target="https://www.tei-c.org/Vault/P5/current/xml/tei/odd/p5subset.xml">ODD de
-                  base</ref> après une analyse des fichiers TEI_Balzac.xml et oddbyexample.xsl.</p>
+            <p>Dérivé du <ref target="https://www.tei-c.org/Vault/P5/current/xml/tei/odd/p5subset.xml">
+               ODD de base</ref> après une analyse des fichiers TEI_Balzac.xml et oddbyexample.xsl.</p>
          </sourceDesc>
       </fileDesc>
    </teiHeader>
@@ -40,7 +39,7 @@
                      Does it all) vise à établir des principes d'encodage stricts, afin de générer
                      un guide personnalisé et spécifique à ce feuilleton.</p>
                   <p>Ce modèle est axé sur le codage du contenu littéraire de <emph rend="italic">La
-                        vieille fille</emph>. Ainsi, les éléments typographiques propres à l'édition
+                     vieille fille</emph>. Ainsi, les éléments typographiques propres à l'édition
                      ont été délibérément exclus.</p>
 
                   <p>Cet encodage XML/TEI ne déclare pas d'entités donc aucune DTD n'a été créée. Le
@@ -53,9 +52,9 @@
                <div3>
                   <head>Exploitations possibles de l'encodage</head>
                   <p>Les résultats de cet encodage sont divers, se concentrant non seulement sur
-                        <emph rend="italic">La vieille fille</emph> elle-même, mais aussi sur sa
+                     <emph rend="italic">La vieille fille</emph> elle-même, mais aussi sur sa
                      comparaison avec d'autres feuilletons publiés par La Presse. Par conséquent,
-                     nous pouvons lister les exploitations suivants :</p>
+                     nous pouvons lister les exploitations suivantes :</p>
 
                   <list>
                      <item>Aspect éditorial : Comparer <emph rend="italic">La vieille fille</emph>
@@ -79,7 +78,8 @@
                <div3>
                   <head>Structure du <gi>teiHeader</gi></head>
                   <p>La balise <gi>teiHeader</gi>, qui est un élément enfant de la balise racine
-                        <gi>TEI</gi>, est structurée en trois sections principales :<specList>
+                     <gi>TEI</gi>, est structurée en trois sections principales :
+                     <specList>
                         <specDesc key="fileDesc"/>
                         <specDesc key="encodingDesc"/>
                         <specDesc key="profileDesc"/>
@@ -89,7 +89,8 @@
                   <div4>
                      <head>Le <gi>fileDesc</gi></head>
                      <p>Dans cet encodage, le <gi>fileDesc</gi> comprend lui-même 6 éléments
-                        essentiels: <specList>
+                        essentiels :
+                        <specList>
                            <specDesc key="titleStmt"/>
                            <specDesc key="editionStmt"/>
                            <specDesc key="publicationStmt"/>
@@ -112,9 +113,9 @@
                            aux lecteurs des connaissances contextuelles pour mieux comprendre les
                            intrigues ou les caractéristiques des personnages. Ces notes sont situées
                            dans <gi>fileDesc</gi> sous la balise <gi>note</gi> à l'intérieur de
-                              <gi>notesStmt</gi>. Afin de les associer aux parties spécifiques du
+                           <gi>notesStmt</gi>. Afin de les associer aux parties spécifiques du
                            texte qui en ont besoin, elles sont dotées d'un attribut
-                              <att>xml:id</att> et un autre <att>target</att>.</p>
+                           <att>xml:id</att> et un autre <att>target</att>.</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                            <fileDesc>
                               <notesStmt>
@@ -123,10 +124,10 @@
                               </notesStmt>
                            </fileDesc>
                            <text>
-                              <body> Beaucoup de personnes ont dù rencontrer dans certaines
-                                 provinces de <placeName ref="#France">France</placeName> plus ou
+                              <body>Beaucoup de personnes ont dù rencontrer dans certaines
+                                 provinces de <placeName ref="#France">France</placeName> plus ou
                                  moins de <ref target="#ChevaliersDeValois">chevaliers
-                                    de Valois</ref> </body>
+                                 de Valois</ref></body>
                            </text>
                         </egXML>
                      </div5>
@@ -158,7 +159,8 @@
                   <div4>
                      <head>Le <gi>encodingDesc</gi></head>
                      <p>Dans cet encodage, le <gi>encodingDesc</gi> comprend lui-même 4 éléments
-                        essentiels: <specList>
+                        essentiels :
+                        <specList>
                            <specDesc key="projectDesc"/>
                            <specDesc key="samplingDecl"/>
                            <specDesc key="editorialDecl"/>
@@ -166,13 +168,13 @@
                         </specList></p>
                      <div5>
                         <head>Le <gi>editorialDecl</gi></head>
-                        <p>La Déclaration éditoriale explicite les principes et pratiques
+                        <p>La déclaration éditoriale explicite les principes et pratiques
                            éditoriales appliquées au texte, incluant la <gi>correction</gi> des
-                           erreurs, la <gi>normalisation</gi> du texte, la gestion des
-                              dialogues(<gi>quotation</gi>), la gestion des
-                              césures(<gi>hyphenation</gi>), et la <gi>segmentation</gi> du texte.
-                           Cette déclaration est important pour comprendre comment le texte a été
-                           préparé et quelles conventions ont été suivies pour son encodage TEI.</p>
+                           erreurs, la <gi>normalisation</gi> du texte, la gestion des dialogues
+                           (<gi>quotation</gi>), la gestion des césures (<gi>hyphenation</gi>),
+                           et la <gi>segmentation</gi> du texte. Cette déclaration est important pour
+                           comprendre comment le texte a été préparé et quelles conventions ont été
+                           suivies pour son encodage TEI.</p>
                      </div5>
                      <div5>
                         <head>Le <gi>tagsDecl</gi></head>
@@ -187,7 +189,8 @@
                   <div4>
                      <head>Le <gi>profileDesc</gi></head>
                      <p>Dans cet encodage, le <gi>profileDesc</gi> comprend lui-même 4 éléments
-                        essentiels: <specList>
+                        essentiels :
+                        <specList>
                            <specDesc key="creation"/>
                            <specDesc key="settingDesc"/>
                            <specDesc key="particDesc"/>
@@ -203,7 +206,7 @@
                            <head>La liste des lieux</head>
                            <p>Chaque lieu identifiable mentionné dans le texte doit être encodé à
                               l'aide de l'élément <gi>place</gi>, avec l'attribut obligatoire
-                                 <att>xml:id</att> servant d'identifiant. Cet identifiant permettra
+                              <att>xml:id</att> servant d'identifiant. Cet identifiant permettra
                               ensuite de référencer les lieux mentionnés dans le texte. De plus,
                               l'utilisation de l'attribut <att>type</att> est obligatoire pour la
                               possibilité de catégoriser les lieux de manière plus précise,
@@ -213,17 +216,18 @@
                               ainsi qu'un élément <gi>note</gi> optionnel pour une brève description
                               du lieu, qui sert principalement à fournir un contexte historique à
                               l'histoire. L'élément <gi>placeName</gi> inclut un élément obligatoire
-                                 <gi>name</gi> indiquant le nom du lieu. Il peut également contenir
+                              <gi>name</gi> indiquant le nom du lieu. Il peut également contenir
                               un élément <gi>address</gi> optionnel fournissant, dans la mesure du
                               possible, des codes pour le pays et la ville (par exemple,
-                                 <gi>country</gi>, <gi>postCode</gi>). En fait, dans notre liste,
+                              <gi>country</gi>, <gi>postCode</gi>). En fait, dans notre liste,
                               l'élément <gi>address</gi> et l'élément <gi>country</gi> qu'il
                               contient sont presque essentiels, car seul le lieu "les Indes" n'a pas
-                              de code de pays attribué, car cele désigne une région historiquement
+                              de code de pays attribué, car celui désigne une région historiquement
                               vague et étendue, souvent utilisée pour se référer à l'ensemble du
                               sous-continent indien et au-delà.</p>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                              <listPlace><place xml:id="Marengo" type="village">
+                              <listPlace>
+                                 <place xml:id="Marengo" type="village">
                                     <placeName>
                                        <name>Marengo</name>
                                        <address>
@@ -231,11 +235,12 @@
                                        </address>
                                        <region>Piémont</region>
                                     </placeName>
-                                    <note> Un village de la commune italienne d'Alexandrie, dans la
+                                    <note>Un village de la commune italienne d'Alexandrie, dans la
                                        province du même nom, dans la région du Piémont. Un lieu de
                                        bataille célèbre à l'époque napoléonienne, associé aux
                                        ambitions politiques de M. du Bousquier.</note>
-                                 </place></listPlace>
+                                 </place>
+                              </listPlace>
                            </egXML>
                         </div6>
 
@@ -244,7 +249,7 @@
                         <head>Le <gi>particDesc</gi></head>
                         <p>Cette section documente tous les personnages et organisations au sein du
                            texte choisi, fournissant une vue d'ensemble des acteurs et de leur
-                           rôle.Par exemple, certains personnages ne sont pas les protagonistes de
+                           rôle. Par exemple, certains personnages ne sont pas les protagonistes de
                            l'histoire, mais simplement des personnages historiques. Nous les avons
                            également inclus pour compléter le contexte de l'histoire.</p>
 
@@ -252,17 +257,17 @@
                            <head>La liste des personnes</head>
                            <p>Il contient un élément <gi>listPerson</gi>, chaque personnage étant
                               encodé dans un élément <gi>person</gi>, semblable à l'élément
-                                 <gi>place</gi>, utilisant l'attribut <att>xml:id</att> comme
+                              <gi>place</gi>, utilisant l'attribut <att>xml:id</att> comme
                               identifiant. Cet identifiant permettra ensuite de référencer les
                               personnages dans le texte. En outre, il possède un attribut optionnel
                               sex. L'élément <gi>person</gi> doit inclure un élément
-                                 <gi>persName</gi> indiquant le nom du personnage, et un élément
-                                 <gi>note</gi> optionnel pour une brève description du personnage.
+                              <gi>persName</gi> indiquant le nom du personnage, et un élément
+                              <gi>note</gi> optionnel pour une brève description du personnage.
                               De plus, si c'est un personnage historiquement vérifiable, nous
-                              ajoutons également <gi>birth</gi> avec l'attribut when pour indiquer
-                              l'année de naissance, de même pour <gi>death</gi> et l'attribut
-                                 <att>when</att> pour l'année de décès, son rôle est d'enrichir le
-                              contexte historique. </p>
+                              ajoutons également <gi>birth</gi> avec l'attribut <att>when</att>
+                              pour indiquer l'année de naissance, de même pour <gi>death</gi> et
+                              l'attribut <att>when</att> pour l'année de décès, son rôle est
+                              d'enrichir le contexte historique.</p>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
                               <listName><person xml:id="Louis_XIV" sex="male">
                                     <persName>Louis XIV</persName>
@@ -275,17 +280,17 @@
                            </egXML>
                         </div6>
                         <div6>
-                           <head>La liste desorganisations</head>
+                           <head>La liste des organisations</head>
                            <p>Il comprend également un élément <gi>listOrg</gi>, chaque personnage
-                              étant encodé dans un élément <gi>Org</gi>, similaire à l'élément
-                                 <gi>person</gi>, utilisant l'attribut <att>xml:id</att> comme
+                              étant encodé dans un élément <gi>org</gi>, similaire à l'élément
+                              <gi>person</gi>, utilisant l'attribut <att>xml:id</att> comme
                               identifiant. Cet identifiant permettra ensuite de référencer les
                               personnages dans le texte. Comme pour <gi>place</gi>, l'utilisation de
                               l'attribut <att>type</att> est obligatoire pour la possibilité de
                               catégoriser les organisations de manière plus précise, facilitant
-                              ainsi leur analyse et leur traitement dans des contextes variés. </p>
+                              ainsi leur analyse et leur traitement dans des contextes variés.</p>
                            <p>Contrairement à l'élément <gi>person</gi>, ici, nous utilisons
-                                 <gi>desc</gi> pour décrire brièvement l'organisation. Dans cet
+                              <gi>desc</gi> pour décrire brièvement l'organisation. Dans cet
                               encodage, chaque élément <gi>Org</gi> doit contenir un <gi>desc</gi>,
                               car cela permet une meilleure compréhension des rôles et de ses
                               fonctions dans le contexte du texte. Cela est important parce qu'une
@@ -327,7 +332,7 @@
 
             </div2>
             <div2>
-               <head> Le <gi>text</gi></head>
+               <head>Le <gi>text</gi></head>
                <div3>
                   <head>Encodage du texte</head>
                   <div4>
@@ -339,11 +344,11 @@
                         livre, et le second <gi>head</gi> est le sous-titre du livre.</p>
                      <p>Le second niveau de <gi>div</gi> correspond aux différentes parties
                         présentes dans l'œuvre, ici représentant un chapitre, indiqué par l'attribut
-                        de <att>type</att> obligatoire "chapter". Un second attribut <att>n</att>
-                        doit fournir le numéro du chapitre. Il contient un <gi>head</gi> qui
-                        représente le titre du chapitre. Comme nous avons découvert que les extraits
+                        de <att>type</att> obligatoire "<val>chapter</val>". Un second attribut
+                        <att>n</att> doit fournir le numéro du chapitre. Il contient un <gi>head</gi>
+                        qui représente le titre du chapitre. Comme nous avons découvert que les extraits
                         sélectionnés proviennent tous du même chapitre, car ils sont suivis dans le
-                        journal par <emph rend="italic"> (suite)</emph> après le titre du chapitre,
+                        journal par <emph rend="italic">(suite)</emph> après le titre du chapitre,
                         il n'y a donc qu'un seul <gi>div</gi> de ce niveau.</p>
                      <p>Comme mentionné précédemment, notre sélection est basée sur les deux
                         premiers et les deux derniers paragraphes de chacun des trois premiers
@@ -383,12 +388,12 @@
                               d'offrir une version plus compréhensible pour le lecteur moderne. La
                               décision d'utiliser cet élément facilite l'analyse du texte.</p>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                              <p>Beaucoup de personnes ont <choice>
+                              <p>Beaucoup de personnes ont <choice>
                                     <orig>dù</orig>
                                     <reg>du</reg>
-                                 </choice> rencontrer dans certaines provinces de <placeName
-                                    ref="#France">France</placeName> plus ou moins de <ref
-                                    target="#ChevaliersDeValois">chevaliers de Valois</ref>
+                                 </choice> rencontrer dans certaines provinces de
+                                 <placeName ref="#France">France</placeName> plus ou moins de
+                                 <ref target="#ChevaliersDeValois">chevaliers de Valois</ref>
                               </p>
                            </egXML>
                         </div6>
@@ -396,27 +401,26 @@
                            <head>les mots en italique</head>
                            <p>On utilise l'élément <gi>emph</gi> pour indiquer une emphase du texte,
                               spécifiquement à travers l'utilisation de l'italique. L'attribut
-                                 <att>rend</att> spécifie le type de mise en évidence, ici
-                                 <att>italic</att> pour l'italique. Cet élément marque une emphase
+                              <att>rend</att> spécifie le type de mise en évidence, ici
+                              <att>italic</att> pour l'italique. Cet élément marque une emphase
                               spécifique. L'utilisation de l'italique avec l'élément <gi>emph</gi>
                               assure une représentation fidèle du texte source, Cela aussi enrichit
-                              le texte.Par exemple, dans cet encodage, il est utilisé pour
+                              le texte. Par exemple, dans cet encodage, il est utilisé pour
                               représenter le latin et une phrase.</p>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                              <p>elle eût dit: <said who="#madame_Lardot" direct="true" aloud="true">
-                                    <emph rend="italic">— Il est si aimable!</emph>
-                                 </said>
+                              <p>elle eût dit : <said who="#madame_Lardot" direct="true" aloud="true">
+                                 <emph rend="italic">— Il est si aimable!</emph></said>
                               </p>
                            </egXML>
                         </div6>
                         <div6>
-                           <head>les mots étrangères</head>
+                           <head>les mots étrangers</head>
                            <p>On utilise l'élément <gi>foreign</gi> pour marquer l'utilisation de
                               mots ou de phrases dans une langue différente de celle du texte
                               principal. L'attribut <att>xml:lang</att> est utilisé pour indiquer la
                               langue spécifique, en utilisant le code <emph rend="italic">la</emph>
                               pour le latin. Cette pratique permet non seulement de respecter
-                              l'authenticité du texte source mais aussi de fournir des informations
+                              l'authenticité du texte source, mais aussi de fournir des informations
                               linguistiques précises aux lecteurs et aux chercheurs.</p>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
                               <foreign xml:lang="la"><hi rend="italic">concha veneris</hi></foreign>
@@ -432,15 +436,15 @@
                            spécifique du texte pour des raisons éditoriales. Les attributs
                            importants de cet élément incluent <att>reason</att>, qui explique la
                            raison de l'omission; <att>extent</att>, qui indique l'étendue de la
-                           partie manquante; et <att>unit</att>, qui précise l'unité de mesure de
+                           partie manquante ; et <att>unit</att>, qui précise l'unité de mesure de
                            l'omission (par exemple, mots, lignes, paragraphes). L'utilisation de
-                              <gi>gap</gi> permet une transparence éditoriale en documentant
+                           <gi>gap</gi> permet une transparence éditoriale en documentant
                            explicitement les lacunes dans le texte encodé, facilitant ainsi la
                            compréhension des choix éditoriaux et la structure du texte par le
-                           lecteur ou le chercheur.Dans le codage de ce roman-feuilleton, il est
+                           lecteur ou le chercheur. Dans le codage de ce roman-feuilleton, il est
                            principalement utilisé pour représenter le paragraphe omis entre le
                            deuxième paragraphe et l'avant-dernier paragraphe, donc l'utilisation de
-                              <gi>gap</gi>est la suivante :</p>
+                           <gi>gap</gi>est la suivante :</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                            <p>premier paragraphe</p>
                            <p>La deuxième paragraphe </p>
@@ -463,63 +467,63 @@
                         travers l'utilisation de l'élément <gi>persName</gi>, lequel permet
                         d'identifier les individus mentionnés. L'attribut <att>ref</att> associe
                         chaque occurrence d'un nom propre à une définition unique dans le
-                           <gi>listPerson</gi>, facilitant ainsi le lien entre les mentions du
+                        <gi>listPerson</gi>, facilitant ainsi le lien entre les mentions du
                         personnage et sa description complète. Cette méthode enrichit le texte d'une
                         couche sémantique, permettant une analyse plus fine des personnages.</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <p><persName ref="#M_du_Bousquier">M. du Bousquier</persName> fut l'un des
                            familiers de <placeName ref="#Barras">Barras</placeName>; il fut au mieux
-                           avec <persName ref="#Fouche">Fouché</persName>, très bien avec <persName
-                              ref="#Bernadotte">Bernadotte</persName></p>
+                           avec <persName ref="#Fouche">Fouché</persName>, très bien avec
+                           <persName ref="#Bernadotte">Bernadotte</persName></p>
                      </egXML>
                   </div4>
                   <div4>
                      <head>La référence indirecte des personnages</head>
                      <p>Pour les références indirectes à des personnages, l'élément <gi>rs</gi>
                         (référence sémantique) est utilisé, avec un attribut <att>type</att>
-                        spécifié à "person" pour indiquer qu'il s'agit d'une personne. L'attribut
-                           <att>ref</att> fonctionne de la même manière que pour <gi>persName</gi>,
-                        en fournissant un lien vers la définition unique du personnage dans le
-                           <gi>listPerson</gi>. Cette approche permet de capturer les mentions de
-                        personnages qui ne sont pas identifiés par leur nom propre dans le texte,
-                        comme les descriptions, enrichissant ainsi l'analyse textuelle par une
-                        compréhension plus profonde des différentes façons dont les personnages sont
-                        évoqués.</p>
+                        spécifié à "<val>person</val>" pour indiquer qu'il s'agit d'une personne.
+                        L'attribut <att>ref</att> fonctionne de la même manière que pour
+                        <gi>persName</gi>, en fournissant un lien vers la définition unique du
+                        personnage dans le <gi>listPerson</gi>. Cette approche permet de capturer
+                        les mentions de personnages qui ne sont pas identifiés par leur nom propre
+                        dans le texte, comme les descriptions, enrichissant ainsi l'analyse textuelle
+                        par une compréhension plus profonde des différentes façons dont les personnages
+                        sont évoqués.</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <p><persName ref="#Suzanne">Suzanne</persName> prit le sac et sortit, en se
                            laissant baiser au front par <rs type="person" ref="#M_du_Bousquier">le
-                              vieux garçon</rs></p>
+                           vieux garçon</rs></p>
                      </egXML>
                   </div4>
                   <div4>
                      <head>Les <gi>roleName</gi> des personnages</head>
                      <p>L'élément <gi>roleName</gi> est utilisé pour indiquer le rôle ou la fonction
                         d'un personnage au sein du récit. Il peut avoir l'attribut <att>ref</att>
-                        pour lier le rôle à un identifiant unique au sein du document.Pour les
+                        pour lier le rôle à un identifiant unique au sein du document. Pour les
                         personnages de l'histoire, les lecteurs peuvent mieux comprendre son métier
                         ou ses caractéristiques. Pour les personnages qui ne sont pas dans
                         l'histoire, Les lecteurs peuvent en apprendre davantage sur le contexte de
-                        cette histoire. </p>
+                        cette histoire.</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <p>
-                           <persName ref="#M_du_Bousquier">Du Bousquier</persName> maudit <persName
-                              ref="#Kellermann">Kellermann</persName> et <persName ref="#Desaix"
-                              >Desaix</persName>, il n'osa pas maudire le <roleName
-                              ref="#Napoleon_Bonaparte">premier consul</roleName> qui lui devait
-                           des millions. Cette alternative de millions à gagner et de ruine réelle
+                           <persName ref="#M_du_Bousquier">Du Bousquier</persName> maudit
+                           <persName ref="#Kellermann">Kellermann</persName> et
+                           <persName ref="#Desaix" >Desaix</persName>, il n'osa pas maudire le
+                           <roleName ref="#Napoleon_Bonaparte">premier consul</roleName> qui lui devait
+                           des millions. Cette alternative de millions à gagner et de ruine réelle
                            priva <roleName ref="#M_du_Bousquier">le fournisseur</roleName> de toutes
-                           ses facultés; il devint imbécile pendant plusieurs jours; </p>
+                           ses facultés ; il devint imbécile pendant plusieurs jours ;</p>
                      </egXML>
                      <p>L'utilisation de cet élément sans l'attribut <att>ref</att> est également
-                        possible, pour pour identifier des rôles génériques ou fonctionnels au sein
+                        possible, pour identifier des rôles génériques ou fonctionnels au sein
                         d'un récit, sans avoir besoin de les relier à un élément spécifique de la
                         liste des personnages</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <p>les affaires de ce temps là n'étaient pas claires un <roleName>espion
-                              politique</roleName>, un <roleName>agioteur</roleName>, un
-                              <roleName>munitionnaire</roleName>, un homme qui faisait
-                           confisquer, d'accord avec le syndic de la commune, des
-                           biens d'émigrés pour les acheter et les revendre;</p>
+                        <p>les affaires de ce temps-là n'étaient pas claires un <roleName>espion
+                           politique</roleName>, un <roleName>agioteur</roleName>, un
+                           <roleName>munitionnaire</roleName>, un homme qui faisait
+                           confisquer, d'accord avec le syndic de la commune, des
+                           biens d'émigrés pour les acheter et les revendre ;</p>
                      </egXML>
                   </div4>
                </div3>
@@ -527,14 +531,14 @@
                   <head>Analyse des relations des personnages</head>
                   <p>L'analyse des relations entre les personnages est cruciale pour comprendre la
                      dynamique et les interactions au sein d'un récit. Pour cela, l'élément
-                        <gi>standOff</gi> est employé pour les données liées, les informations
+                     <gi>standOff</gi> est employé pour les données liées, les informations
                      contextuelles et les annotations à distance intégrées dans un document TEI. Au
                      sein de ce <gi>standOff</gi>, on utilise <gi>listRelation</gi> pour regrouper
-                     les relations par type, tels que les liens familiaux, sociaux ou historiques.
+                     les relations par type, tel que les liens familiaux, sociaux ou historiques.
                      Chaque <gi>relation</gi> spécifie le type de lien entre les personnages avec
                      des attributs comme <att>name</att> pour le type de relation, <att>active</att>
                      pour l'initiateur de la relation, <att>passive</att> pour le récepteur, et
-                        <att>mutual</att> pour les relations réciproques. La description détaillée
+                     <att>mutual</att> pour les relations réciproques. La description détaillée
                      de chaque relation est fournie dans un élément <gi>desc</gi>, permettant une
                      explication claire du lien. Cette méthode structurée offre une représentation
                      riche et nuancée des réseaux de relations, essentielle pour les études
@@ -579,7 +583,7 @@
                      rapporté directement, <att>aloud</att> pour spécifier si les paroles sont
                      prononcées à haute voix, et <att>toWhom</att> pour désigner le destinataire des
                      paroles. Dans le premier exemple, la valeur de <att>aloud</att> est
-                        <val>true</val>, ce qui signifie que la phrase a été prononcée, mais la
+                     <val>true</val>, ce qui signifie que la phrase a été prononcée, mais la
                      valeur dans le deuxième exemple est <val>false</val>, c'est-à-dire que cette
                      phrase est la pensée intérieure du locuteur.L'utilisation de <gi>said</gi>
                      offre une grande précision dans l'encodage des dialogues. L'analyse des
@@ -588,13 +592,13 @@
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <p>
                         <said who="#chevalier_de_Valois_d_Alencon" direct="true" aloud="true"
-                           toWhom="#Suzanne">Ah! c’est toi, <persName ref="#Suzanne"
-                              >Suzanne</persName></said>, dit <persName
-                           ref="#chevalier_de_Valois_d_Alencon"> le chevalier de Valois</persName>
-                        sans discontinuer son opération commencée qui consistait à repasser la lame
-                        de son rasoir sur un cuir. <said who="#chevalier_de_Valois_d_Alencon"
-                           direct="true" aloud="true" toWhom="#Suzanne">Que viens-tu faire ici, cher
-                           petit bijou d’espiéglerie?</said></p>
+                        toWhom="#Suzanne">Ah! c’est toi, <persName ref="#Suzanne">Suzanne</persName>
+                        </said>, dit <persName ref="#chevalier_de_Valois_d_Alencon"> le chevalier de
+                        Valois</persName> sans discontinuer son opération commencée qui consistait à
+                        repasser la lame de son rasoir sur un cuir. <said who="#chevalier_de_Valois_d_Alencon"
+                        direct="true" aloud="true" toWhom="#Suzanne">Que viens-tu faire ici, cher
+                        petit bijou d’espiéglerie?</said>
+                     </p>
                      <p>
                         <said who="#Suzanne" direct="true" aloud="true"
                            toWhom="#chevalier_de_Valois_d_Alencon">—Je viens vous dire une chose qui
@@ -602,13 +606,12 @@
                      </p>
                      <p>
                         <said who="#chevalier_de_Valois_d_Alencon" direct="true" aloud="true"
-                           toWhom="#Suzanne">—S’agit-il de <persName ref="#Cesarine"
-                              >Césarine</persName>?</said>
+                           toWhom="#Suzanne">—S’agit-il de <persName ref="#Cesarine">Césarine</persName>?</said>
                      </p>
                      <p>
                         <said who="#Suzanne" direct="true" aloud="true"
                            toWhom="#chevalier_de_Valois_d_Alencon">—Je m'embarrasse bien de votre
-                              <persName ref="#Cesarine">Césarine</persName>, dit-elle d’un air à la
+                           <persName ref="#Cesarine">Césarine</persName>, dit-elle d’un air à la
                            fois mutin, grave et insouciant.</said>
                      </p>
                   </egXML>
@@ -616,8 +619,8 @@
                      <p>
                         <persName ref="#Suzanne">Suzanne</persName> prit le sac et sortit, en se
                         laissant baiser au front par <rs type="person" ref="#M_du_Bousquier">le
-                           vieux garçon</rs>, qui eut l'air de dire : <said direct="true"
-                           aloud="false">—C’est un droit qui me coûte cher.</said>
+                        vieux garçon</rs>, qui eut l'air de dire : <said direct="true"
+                        aloud="false">—C’est un droit qui me coûte cher.</said>
                      </p>
                   </egXML>
                </div3>

@@ -2,6 +2,13 @@
 
 <?xml-model href="out/ODD_Balzac.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="out/ODD_Balzac.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<!DOCTYPE TEI [
+   <!ENTITY Paris '<placeName ref="#Paris">Paris</placeName>' >
+   <!ENTITY M-Valois '<persName ref="#chevalier_de_Valois_d_Alencon">M. de Valois</persName>' >
+   <!ENTITY chevalier '<rs type="person" ref="#chevalier_de_Valois_d_Alencon">chevalier</rs>' >
+]>
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -38,9 +45,9 @@
             <idno type="ARK">ark:/12148/bpt6k4268237</idno>
             <idno type="ARK">ark:/12148/bpt6k426824m</idno>
             <availability>
-               <licence
-                  target="https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica"
-                  >Domaine public</licence>
+               <licence target="https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica">
+                  Domaine public
+               </licence>
                <p>Document consultable en ligne et disponible dans le domaine public.</p>
             </availability>
             <date from="1836-10-23" to="1836-10-25">du 23 au 25 octobre 1836 (Numéro du 103 au
@@ -80,12 +87,12 @@
                   <pubPlace>Paris</pubPlace>
                   <date from="1836-10-23" to="1836-10-25">du 23 au 25 octobre 1836 (Numéro du 103 au
                      105)</date>
-                  <distributor facs="https://gallica.bnf.fr/ark:/12148/bpt6k426822v/f3.item#"
-                     >Gallica Bibliothèque nationale de France</distributor>
+                  <distributor facs="https://gallica.bnf.fr/ark:/12148/bpt6k426822v/f3.item">
+                     Gallica Bibliothèque nationale de France</distributor>
                   <availability>
-                     <licence
-                        target="https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica"
-                        >Domaine public</licence>
+                     <licence target="https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica">
+                        Domaine public
+                     </licence>
                      <p>Document consultable en ligne et disponible dans le domaine public.</p>
                   </availability>
                </publicationStmt>
@@ -110,7 +117,7 @@
                la fin de son roman et comment l'histoire se déroule et se termine.</p>
          </projectDesc>
          <samplingDecl>
-            <p>Comme «La vieille fille» a été publiée en plusieurs feuilletons, ce projet a choisi
+            <p>Comme « La vieille fille » a été publiée en plusieurs feuilletons, ce projet a choisi
                d'encoder les deux premiers et les deux derniers paragraphes de chaque feuilleton,
                afin de faciliter l'analyse de la manière dont Balzac construit des ouvertures et des
                conclusions dans ses romans-feuilletons.</p>
@@ -286,7 +293,7 @@
                      </address>
                      <region>Piémont</region>
                   </placeName>
-                  <note> Un village de la commune italienne d'Alexandrie, dans la province du même
+                  <note>Un village de la commune italienne d'Alexandrie, dans la province du même
                      nom, dans la région du Piémont. Un lieu de bataille célèbre à l'époque
                      napoléonienne, associé aux ambitions politiques de M. du Bousquier.</note>
                </place>
@@ -396,7 +403,7 @@
 
                <person xml:id="Suzanne" sex="female">
                   <persName>Suzanne</persName>
-                  <note>Suzanne est une jeune ouvrière travaillant pour madame Lardot. </note>
+                  <note>Suzanne est une jeune ouvrière travaillant pour madame Lardot.</note>
                </person>
 
                <person xml:id="Cesarine" sex="demale">
@@ -412,8 +419,8 @@
 
                <person xml:id="Grevin" sex="male">
                   <persName>Grevin</persName>
-                  <note>Le grand-père de madame Lardot, avait servi sous M. d’Estaing dans
-                     les Indes</note>
+                  <note>Le grand-père de madame Lardot, avait servi sous M. d’Estaing dans
+                     les Indes</note>
                </person>
 
                <person xml:id="M_dEstaing" sex="male">
@@ -427,7 +434,7 @@
                <person xml:id="M_du_Bousquier" sex="male">
                   <persName>M. du Bousquier</persName>
                   <note>M. du Bousquier est un homme issu d'une vieille famille d’Alençon, et qui
-                     tenait le milieu entre le bourgeois et le hobereau.</note>
+                     tenait le milieu entre le bourgeois et le hobereau.</note>
                </person>
                <person xml:id="Ouvrard" sex="male">
                   <persName>Gabriel-Julien Ouvrard</persName>
@@ -554,112 +561,102 @@
             <head type="subtitle">SCÈNE DE LA VIE DE PROVINCE</head>
             <div type="chapter" n="1">
                <head>I. LA CHASTE SUZANNE ET SES DEUX VIEILLARDS</head>
-               <p>Beaucoup de personnes ont <choice>
-                     <orig>dù</orig>
-                     <reg>du</reg>
-                  </choice> rencontrer dans certaines provinces de <placeName ref="#France"
-                     >France</placeName> plus ou moins de <ref target="#ChevaliersDeValois"
-                     >chevaliers de Valois</ref> : il en existait un en <placeName ref="#Normandie"
-                     >Normandie</placeName>, il s'en trouvait un autre à <placeName ref="#Bourges"
-                     >Bourges</placeName>,  un troisième florissait en 1816 dans la
-                     ville d'<placeName ref="#Alençon">Alençon</placeName>, peut-être le <placeName
-                     ref="#Midi">Midi</placeName> possèdait-il le  sien; mais le dénombrement de
-                  cette tribu valésienne est ici sans importance. Tous ces <ref
-                     target="#ChevaliersDeValois">chevaliers</ref>, parmi lesquels il en est sans
-                  doute qui sont <persName ref="#Valois">Valois</persName> comme <persName
-                     ref="#Louis_XIV">Louis XIV </persName> était <persName ref="#Bourbons"
-                     >Bourbon</persName>, se connaissaient si peu entre eux, qu'il ne fallait point
-                  leur parler des uns aux autres; tous laissaient d'ailleurs les <persName
-                     ref="#Bourbons">Bourbons</persName> en parfaite tranquillité sur le trône de
-                     <placeName ref="#France">France</placeName>, car il est un peu trop, avéré que
-                     <persName ref="#Henri_IV">Henri IV</persName> devint <roleName ref="#Henri_IV"
-                     >roi</roleName>, faute d'un héritier mâle dans la première branche d'<persName
-                     ref="#Orleans">Orléans</persName>, dite de <persName ref="#Valois"
-                     >Valois</persName>.  S'il existe des <persName ref="#Valois">Valois</persName>,
-                  ils proviennent de <persName ref="#Charles_de_Valois">Charles de
-                  Valois</persName>, duc d'<placeName ref="#Angoulème"><choice>
-                        <orig>Angoulème</orig>
-                        <reg>Angoulême</reg>
-                     </choice></placeName>,  fils de <persName ref="#Charles_IX"
-                     >Charles IX</persName> et de <persName ref="#Marie_Touchet">Marie
-                     Touchet</persName>, de qui la postérité mâle s'est également éteinte, jusqu'à
-                  preuve contraire. Aussi ne fut-ce jamais sérieusement que l'on
-                  prétendit donner cette illustre origine au mari de la fameuse <persName
-                     ref="#Lamothe_Valois">Lamothe-Valois</persName>, impliquée dans l'<ref
-                     target="#affaireDuCollier">affaire du collier</ref>. </p>
-               <p>Chacun de ces chevaliers, si les renseignements sont exacts, était, comme celui
-                     d'<placeName ref="#Alençon">Alençon</placeName>, un vieux  gentilhomme, long,
-                  sec et sans fortune. Celui de <placeName ref="#Bourges">Bourges</placeName> avait
-                  émigre, celui de <placeName ref="#Touraine">Touraine</placeName> s'était caché, 
-                     celui d'<placeName ref="#Alençon">Alençon</placeName> avait guerroyé dans
-                     <placeName ref="#laVendee">la Vendée</placeName> et quelque peu chouanné. La
-                  majeure partie de la jeunesse de ce dernier s'était passée à <placeName
-                     ref="#Paris">Paris</placeName>, où la révolution l'avait surpris à trente ans
-                  au milieu de ses conquêtes. <persName ref="#chevalier_de_Valois_d_Alencon"
-                     >Le chevalier de Valois d'<placeName ref="#Alençon"
-                     >Alençon</placeName></persName>, comme ses homonymes, était accepté par la
-                  haute aristocratie de la province pour un vrai <persName ref="#Valois"
-                     >Valois</persName> ; il avait d’ailleurs
-                  d'excellentes manières, et paraissait homme de haute compagnie. Quant à ses
-                  mœurs publiques, il avait l'habitude de ne dîner jamais chez lui; il jouait tous
-                  les soirs, et s'était fait prendre pour un homme très spirituel. Il avait le
+               <p>Beaucoup de personnes ont <choice><orig>dù</orig><reg>du</reg></choice>
+                  rencontrer dans certaines provinces de <placeName ref="#France">
+                  France</placeName> plus ou moins de <ref target="#ChevaliersDeValois">
+                  chevaliers de Valois</ref> : il en existait un en <placeName ref="#Normandie">
+                  Normandie</placeName>, il s'en trouvait un autre à <placeName ref="#Bourges">
+                  Bourges</placeName>, un troisième florissait en 1816 dans la ville
+                  d'<placeName ref="#Alençon">Alençon</placeName>, peut-être le
+                  <placeName ref="#Midi">Midi</placeName> possédait-il le sien ; mais le dénombrement de
+                  cette tribu valésienne est ici sans importance. Tous ces <ref target="#ChevaliersDeValois">
+                  chevaliers</ref>, parmi lesquels il en est sans doute qui sont <persName ref="#Valois">
+                  Valois</persName> comme <persName ref="#Louis_XIV">Louis XIV</persName> était
+                  <persName ref="#Bourbons">Bourbon</persName>, se connaissaient si peu entre eux,
+                  qu'il ne fallait point leur parler des uns aux autres ; tous laissaient d'ailleurs
+                  les <persName ref="#Bourbons">Bourbons</persName> en parfaite tranquillité sur le trône de
+                  <placeName ref="#France">France</placeName>, car il est un peu trop, avéré que
+                  <persName ref="#Henri_IV">Henri IV</persName> devint <roleName ref="#Henri_IV">
+                  roi</roleName>, faute d'un héritier mâle dans la première branche
+                  d'<persName ref="#Orleans">Orléans</persName>, dite de <persName ref="#Valois">
+                  Valois</persName>. S'il existe des <persName ref="#Valois">Valois</persName>,
+                  ils proviennent de <persName ref="#Charles_de_Valois">Charles de
+                  Valois</persName>, duc d'<placeName ref="#Angoulème"><choice><orig>Angoulème</orig>
+                  <reg>Angoulême</reg></choice></placeName>, fils de <persName ref="#Charles_IX">
+                  Charles IX</persName> et de <persName ref="#Marie_Touchet">Marie
+                  Touchet</persName>, de qui la postérité mâle s'est également éteinte, jusqu'à
+                  preuve contraire. Aussi ne fut-ce jamais sérieusement que l'on
+                  prétendit donner cette illustre origine au mari de la fameuse
+                  <persName ref="#Lamothe_Valois">Lamothe-Valois</persName>, impliquée dans
+                  l'<ref target="#affaireDuCollier">affaire du collier</ref>.</p>
+               <p>Chacun de ces chevaliers, si les renseignements sont exacts, était, comme celui
+                  d'<placeName ref="#Alençon">Alençon</placeName>, un vieux gentilhomme, long,
+                  sec et sans fortune. Celui de <placeName ref="#Bourges">Bourges</placeName> avait
+                  émigre, celui de <placeName ref="#Touraine">Touraine</placeName> s'était caché,
+                  celui d'<placeName ref="#Alençon">Alençon</placeName> avait guerroyé dans
+                  <placeName ref="#laVendee">la Vendée</placeName> et quelque peu chouanné. La
+                  majeure partie de la jeunesse de ce dernier s'était passée à &Paris;, où la révolution
+                  l'avait surpris à trente ans au milieu de ses conquêtes.
+                  <persName ref="#chevalier_de_Valois_d_Alencon"> Le chevalier de Valois d'<placeName ref="#Alençon">
+                  Alençon</placeName></persName>, comme ses homonymes, était accepté par la
+                  haute aristocratie de la province pour un vrai <persName ref="#Valois">Valois</persName> ;
+                  il avait d’ailleurs d'excellentes manières, et paraissait homme de haute compagnie. Quant à ses
+                  mœurs publiques, il avait l'habitude de ne dîner jamais chez lui; il jouait tous
+                  les soirs, et s'était fait prendre pour un homme très spirituel. Il avait le
                   défaut de savoir une foule d'<choice>
                      <orig>anecdoctes</orig>
                      <reg>anecdotes</reg>
-                  </choice> sur le règne de <persName ref="#Louis_XV">Louis XV</persName> et sur les
+                  </choice> sur le règne de <persName ref="#Louis_XV">Louis XV</persName> et sur les
                   commencements de la révolution, qu'il avait le bonheur de conter assez bien pour
-                  ceux qui les entendaient la première fois; en revanche, il avait la vertu de ne
-                  pas répéter ses bons mots personnels et de ne jamais parler de ses amours ; mais
-                  ces grâces et ses sourires commettaient de délicieuses indiscrétions. <rs
-                     type="person" ref="#chevalier_de_Valois_d_Alencon">Ce bon homme</rs>
-                  usait du privilége qu'ont les vieux gentilshommes voltairiens de ne point aller à
-                  la messe, et chacun avait une excessive indulgence pour son irréligion,  en faveur
+                  ceux qui les entendaient la première fois; en revanche, il avait la vertu de ne
+                  pas répéter ses bons mots personnels et de ne jamais parler de ses amours ; mais
+                  ces grâces et ses sourires commettaient de délicieuses indiscrétions.
+                  <rs type="person" ref="#chevalier_de_Valois_d_Alencon">Ce bon homme</rs>
+                  usait du privilége qu'ont les vieux gentilshommes voltairiens de ne point aller à
+                  la messe, et chacun avait une excessive indulgence pour son irréligion,  en faveur
                   de son dévouement à la cause royale. Son principal vice était de prendre du tabac
-                  dans une vieille boîte d'or ornée du portrait d'une princesse <persName
-                     ref="#Goritza">Goritza</persName>, charmante Hongroise de qui la beauté fut
+                  dans une vieille boîte d'or ornée du portrait d'une princesse
+                  <persName ref="#Goritza">Goritza</persName>, charmante Hongroise de qui la beauté fut
                   célèbre sous la fin du règne de <persName ref="#Louis_XV">Louis XV</persName>, à
                   laquelle <rs type="person" ref="#chevalier_de_Valois_d_Alencon">le
-                     jeune chevalier</rs> avait été longtemps attaché, dont il ne parlait
-                  jamais sans émotion,  et pour laquelle il s'était battu. </p>
+                  jeune chevalier</rs> avait été longtemps attaché, dont il ne parlait
+                  jamais sans émotion, et pour laquelle il s'était battu. </p>
 
                <gap reason="editorial" extent="unknown" unit="paragraphs"/>
 
-               <p>Beaucoup de gens ont envié la douce existence de <rs type="person"
-                     ref="#chevalier_de_Valois_d_Alencon">ce vieux garçon</rs>, pleine de parties de
-                  boston, de trictrac, de reversi, de wisth et de piquet bien jouées, de dîners bien
-                  digérés, de prises de tabac humées avec grâce, de tranquilles promenades. Presque
-                     tout <placeName ref="#Alençon">Alençon</placeName> croyait cette vie exempte
-                  d'ambition et d’intérêts graves; mais aucun homme n'a une vie aussi simple que ses
+               <p>Beaucoup de gens ont envié la douce existence de
+                  <rs type="person" ref="#chevalier_de_Valois_d_Alencon">ce vieux garçon</rs>, pleine de parties de
+                  boston, de trictrac, de reversi, de wisth et de piquet bien jouées, de dîners bien
+                  digérés, de prises de tabac humées avec grâce, de tranquilles promenades. Presque
+                  tout <placeName ref="#Alençon">Alençon</placeName> croyait cette vie exempte
+                  d'ambition et d’intérêts graves ; mais aucun homme n'a une vie aussi simple que ses
                   envieux la lui font. Vous découvrirez dans les villages les plus oubliés, des
-                  mollusques humains, des rotifères eu apparence morts, qui ont la passion des
-                  lépidoptères ou de la conchyliologie, et qui se donnent des maux infinis pour je
-                  ne sais quels papillons ou pour la <ref target="#conchaVeneris"><foreign
-                     xml:lang="la"><emph rend="italic">concha veneris</emph></foreign></ref>.  Non
-                     seulement, <rs type="person" ref="#chevalier_de_Valois_d_Alencon"
-                     >le chevalier</rs> avait ses coquillages; mais encore il nourrissait un
-                  ambitieux désir poursuivi avec une profondeur digne de <persName
-                     ref="#Sixte-Quint">Sixte-Quint</persName> : il voulait se marier avec
-                  une profondeur riche, sans doute dans l'intention de s'en faire un marche-pied
-                  pour aborder les sphères élevées de la cour. Là était le secret de sa royale tenue
-                  et de son séjour à <placeName ref="#Alençon">Alençon</placeName>. </p>
+                  mollusques humains, des rotifères eu apparence morts, qui ont la passion des
+                  lépidoptères ou de la conchyliologie, et qui se donnent des maux infinis pour je
+                  ne sais quels papillons ou pour la <ref target="#conchaVeneris"><foreign xml:lang="la">
+                  <emph rend="italic">concha veneris</emph></foreign></ref>. Non seulement, le &chevalier;
+                  avait ses coquillages ; mais encore il nourrissait un ambitieux désir poursuivi avec
+                  une profondeur digne de <persName ref="#Sixte-Quint">Sixte-Quint</persName> : il voulait se
+                  marier avec une profondeur riche, sans doute dans l'intention de s'en faire un marche-pied
+                  pour aborder les sphères élevées de la cour. Là était le secret de sa royale tenue
+                  et de son séjour à <placeName ref="#Alençon">Alençon</placeName>.</p>
                <p>Un mercredi, de grand matin, vers le milieu du printemps de l'année 16, c'était sa
-                  façon de parler, au moment où <rs type="person"
-                     ref="#chevalier_de_Valois_d_Alencon">le chevalier</rs> passait sa robe de
-                  chambre en vieux damas vert à fleurs, il entendit, malgré
-                  son coton dans l'oreille, le pas léger d'<rs type="person" ref="#Suzanne">une
-                     jeune fille</rs> qui montait l'escalier. Bientôt trois coups furent
-                  discrètement frappés à sa porte; et, sans attendre la réponse, <rs type="person"
-                     ref="#Suzanne">une belle personne</rs> se coula chez le vieux garçon. </p>
+                  façon de parler, au moment où le &chevalier; passait sa robe de chambre en vieux
+                  damas vert à fleurs, il entendit, malgré son coton dans l'oreille, le pas léger
+                  d'<rs type="person" ref="#Suzanne">une jeune fille</rs> qui montait l'escalier. Bientôt
+                  trois coups furent discrètement frappés à sa porte ; et, sans attendre la réponse,
+                  <rs type="person" ref="#Suzanne">une belle personne</rs> se coula chez le vieux garçon.</p>
                <gap reason="editorial" extent="unknown" unit="paragraphs"/>
                <p>
                   <said who="#chevalier_de_Valois_d_Alencon" direct="true" aloud="true"
-                     toWhom="#Suzanne">Ah! c’est toi, <persName ref="#Suzanne"
-                     >Suzanne</persName></said>, dit <persName ref="#chevalier_de_Valois_d_Alencon">
-                     le chevalier de Valois</persName> sans discontinuer son opération commencée qui
+                  toWhom="#Suzanne">Ah! c’est toi, <persName ref="#Suzanne">
+                  Suzanne</persName></said>, dit <persName ref="#chevalier_de_Valois_d_Alencon">
+                  le chevalier de Valois</persName> sans discontinuer son opération commencée qui
                   consistait à repasser la lame de son rasoir sur un cuir. <said
-                     who="#chevalier_de_Valois_d_Alencon" direct="true" aloud="true"
-                     toWhom="#Suzanne">Que viens-tu faire ici, cher petit bijou
-                     d’espiéglerie?</said></p>
+                  who="#chevalier_de_Valois_d_Alencon" direct="true" aloud="true"
+                  toWhom="#Suzanne">Que viens-tu faire ici, cher petit bijou
+                  d’espiéglerie?</said>
+               </p>
                <p>
                   <said who="#Suzanne" direct="true" aloud="true"
                      toWhom="#chevalier_de_Valois_d_Alencon">—Je viens vous dire une chose qui vous
@@ -667,212 +664,186 @@
                </p>
                <p>
                   <said who="#chevalier_de_Valois_d_Alencon" direct="true" aloud="true"
-                     toWhom="#Suzanne">—S’agit-il de <persName ref="#Cesarine"
-                     >Césarine</persName>?</said>
+                     toWhom="#Suzanne">—S’agit-il de <persName ref="#Cesarine">
+                     Césarine</persName>?</said>
                </p>
                <p>
                   <said who="#Suzanne" direct="true" aloud="true"
                      toWhom="#chevalier_de_Valois_d_Alencon">—Je m'embarrasse bien de votre
-                        <persName ref="#Cesarine">Césarine</persName>, dit-elle d’un air à la fois
+                     <persName ref="#Cesarine">Césarine</persName>, dit-elle d’un air à la fois
                      mutin, grave et insouciant.</said>
                </p>
-               <p>Cette charmante <persName ref="#Suzanne"
-                  >Suzanne</persName>, de qui la comique aventure, devait 
-                  exercer une si grande influence sur la destinée
-                     des principaux personnages de cette histoire, était une <roleName
-                     ref="#Suzanne">ouvrière</roleName> de  <persName ref="#madame_Lardot"
-                     >madame Lardot</persName>. Un mot sur la topographie de
-                  la maison. Les ateliers occupaient tout le rez-de-chaussée. La
-                  petite cour servait à étendre sur des cordes en crin les mouchoirs brodés,  les
-                  collerettes, les  canezous, les manchettes, les chemises a jabot, les <choice>
-                     <orig>cravattes</orig>
-                     <reg>cravates</reg>
-                  </choice>, les dentelles, les robes brodées, tout
-                  le linge fin des meilleures maisons de la ville. <rs type="person"
-                     ref="#chevalier_de_Valois_d_Alencon">Le chevalier</rs>
-                  prétendait savoir par le nombre de canezous de la
-                     femme du <roleName>receveur-général</roleName> le men de ses
-                  intrigues; car it se trouvait des chemises à jabot et des cravattes en corrélation aouvvec les 
-                  canezous et les collerettes. Quoique pouvant tout
-                  deviner par celle espèce de tenue en partie double des rendez-vous de
-                     la ville, <rs type="person" ref="#chevalier_de_Valois_d_Alencon"
-                     >le chevalier</rs> ne commit jamais, une indiscrétion, 
-                  il ne fit jamais une épigramme susceptible de lui faire fermer une maison (et il
-                     avait de l'esprit!). Mais comptez que <persName
-                     ref="#chevalier_de_Valois_d_Alencon">M.
-                  de Valois</persName> était un homme d'une tenue supérieure, de qui les 
-                  talents, comme ceux de beaucoup
-                  d’autres, se sont perdus dans un cercle étroit. Seulement, car il était homme
-                     fin, <rs type="person" ref="#chevalier_de_Valois_d_Alencon">le chevalier</rs> 
-                  se permettait certaines œillades incisives qui faisaient  trembler 
-                  les femmes; et néanmoins toutes l'aimèrent après avoir reconnu combien était profonde sa discrétion; combien
-                     il avait de sympathie pour les faiblesses. La première <roleName>ouvrière</roleName>,
-                  le factotum de <persName ref="#madame_Lardot">madame Lardot</persName>, <rs
-                     type="person" ref="#madame_Lardot">une vieille fille</rs> de quarante-cinq ans,
-                  laide à faire pour demeurait porter à porte avec <rs type="person"
-                     ref="#chevalier_de_Valois_d_Alencon">le chevalier</rs>; au-dessus
-                  d'eux, il n'y avait plus que des mansardes.  Chaque
-                     appartement se composait comme celui du <rs type="person"
-                     ref="#chevalier_de_Valois_d_Alencon">chevalier</rs> de deux chambres,
-                  éclairées l'une sur la rue, l’autre sur la cour. Au premier étage,
-                     au-dessous du <rs type="person" ref="#chevalier_de_Valois_d_Alencon"
-                     >chevalier</rs>, demeurait un vieux paralytitique le grand-père de <persName
-                     ref="#madame_Lardot">madame Lardot</persName>, <rs type="person" ref="#Grevin"
-                        >un ancien <roleName ref="#Grevin">corsaire</roleName></rs> nommé <persName
-                     ref="#Grevin">Grevin</persName> qui avait servi sous <persName
-                     ref="#M_dEstaing">M. d’Estaing</persName>  dans <placeName ref="#les_Inde"
-                     >les Indes</placeName>, et qui était sourd. Quant à <persName
-                     ref="#madame_Lardot">madame Lardot</persName> qui occupait 1'autre 
-                  logement du premier étage, elle avait un si grand faible pour
-                  les gens de coudition, qu'elle pouvait passer pour aveugle à l’endroit du <rs
-                     type="person" ref="#chevalier_de_Valois_d_Alencon"
-                     >chevalier</rs>. Pour elle, <persName ref="#chevalier_de_Valois_d_Alencon"
-                     >M. dè Valois</persName> était un roi qui faisait
-                     tout bien. Une de ses <roleName>ouvrières</roleName> aurait-elle commis
-                     un bonheur attribué au <rs type="person" ref="#chevalier_de_Valois_d_Alencon"
-                     >chevalier</rs>, elle eût dit: <said who="#madame_Lardot" direct="true"
-                        aloud="true"><emph rend="italic">— Il est si aimable!</emph>
-                  </said>Ainsi, quoique cette maison fût de verre, comme toutes les maisons 
-                  de province, elle était relativement à <persName
-                     ref="#chevalier_de_Valois_d_Alencon">M. de.Valois</persName>, discrète
-                  comme une caverne de voleurs. </p>
+               <p>Cette charmante <persName ref="#Suzanne"> Suzanne</persName>, de qui la comique
+                  aventure, devait exercer une si grande influence sur la destinée des principaux
+                  personnages de cette histoire, était une <roleName ref="#Suzanne">ouvrière</roleName>
+                  de <persName ref="#madame_Lardot">madame Lardot</persName>. Un mot sur la topographie de
+                  la maison. Les ateliers occupaient tout le rez-de-chaussée. La
+                  petite cour servait à étendre sur des cordes en crin les mouchoirs brodés, les
+                  collerettes, les canezous, les manchettes, les chemises a jabot,
+                  les <choice><orig>cravattes</orig><reg>cravates</reg></choice>, les dentelles,
+                  les robes brodées, tout le linge fin des meilleures maisons de la ville. Le &chevalier;
+                  prétendait savoir par le nombre de canezous de la femme du <roleName>receveur-général</roleName>
+                  le men de ses intrigues ; car it se trouvait des chemises à jabot et des cravattes
+                  en corrélation aouvvec les canezous et les collerettes. Quoique pouvant tout
+                  deviner par celle espèce de tenue en partie double des rendez-vous de la ville,
+                  le &chevalier; ne commit jamais, une indiscrétion, il ne fit jamais une épigramme susceptible
+                  de lui faire fermer une maison (et il avait de l'esprit!). Mais comptez que &M-Valois;
+                  était un homme d'une tenue supérieure, de qui les talents, comme ceux de beaucoup
+                  d’autres, se sont perdus dans un cercle étroit. Seulement, car il était homme
+                  fin, le &chevalier; se permettait certaines œillades incisives qui faisaient trembler
+                  les femmes ; et néanmoins toutes l'aimèrent après avoir reconnu combien était
+                  profonde sa discrétion ; combien il avait de sympathie pour les faiblesses.
+                  La première <roleName>ouvrière</roleName>, le factotum de <persName ref="#madame_Lardot">
+                  madame Lardot</persName>, <rs type="person" ref="#madame_Lardot">une vieille fille</rs>
+                  de quarante-cinq ans, laide à faire pour demeurait porter à porte avec le &chevalier; ; au-dessus
+                  d'eux, il n'y avait plus que des mansardes. Chaque appartement se composait comme celui du
+                  <rs type="person" ref="#chevalier_de_Valois_d_Alencon">chevalier</rs> de deux chambres,
+                  éclairées l'une sur la rue, l’autre sur la cour. Au premier étage, au-dessous du &chevalier;,
+                  demeurait un vieux paralytitique le grand-père de <persName ref="#madame_Lardot">madame Lardot</persName>,
+                  <rs type="person" ref="#Grevin">un ancien <roleName ref="#Grevin">corsaire</roleName></rs> nommé
+                  <persName ref="#Grevin">Grevin</persName> qui avait servi sous <persName ref="#M_dEstaing">M. d’Estaing</persName>
+                  dans <placeName ref="#les_Inde">les Indes</placeName>, et qui était sourd. Quant à
+                  <persName ref="#madame_Lardot">madame Lardot</persName> qui occupait 1'autre
+                  logement du premier étage, elle avait un si grand faible pour les gens de coudition, qu'elle pouvait
+                  passer pour aveugle à l’endroit du <rs type="person" ref="#chevalier_de_Valois_d_Alencon">
+                  chevalier</rs>. Pour elle, &M-Valois; était un roi qui faisait tout bien. Une de ses
+                  <roleName>ouvrières</roleName> aurait-elle commis un bonheur attribué au &chevalier;, elle eût dit :
+                  <said who="#madame_Lardot" direct="true" aloud="true"><emph rend="italic">— Il est si aimable!</emph>
+                  </said>Ainsi, quoique cette maison fût de verre, comme toutes les maisons
+                  de province, elle était relativement à &M-Valois;, discrète
+                  comme une caverne de voleurs. </p>
                <gap reason="editorial" extent="unknown" unit="paragraphs"/>
                <p>
                   <said who="#chevalier_de_Valois_d_Alencon" direct="true" aloud="true"
-                     toWhom="#Suzanne">– Oui.. je t'entends, tu veux que je te croie; eh bien, je te
-                     crois; mais suis mon conseil, va chez <persName ref="#M_du_Bousquier">M. du
-                        Bousquier</persName> depuis cinq à six mois? Eh bien, je ne
-                     te demande pas ce qui se passe entre vous;  mais je le connais, il
-                     a de l'amour-propre, il est vieux garçon, il est très
-                     riche, il a deux mille cinq cents livres de rente et
-                     n'en dépense pas huit cents. Si tu es aussi spirituelle que je ]e suppose, 
-                        tu verras <placeName ref="#Paris">Paris</placeName> à ses frais. Va, <rs
-                        type="person" ref="#Suzanne"
-                     >ma petite biche</rs>, va l’entortiller, surtout sois déliée comme une soie; a chaque parole
-                     fais un double tour et un noeud, il est homme à redouter le scandale, 
-                     et s'il t'a donné lieu de le mettre sur la sellette… enfin, tu comprends, menace-le de t'adresser aux dames du
-                     bureau de charité. D’ailleurs, il est ambitieux; eh bien, un
-                     homme peut arriver à tout par sa femme,  n'es-tu donc pas assez belle, assez
-                     spirituelle pour faire la fortune de ton mari ? Hé, malepeste, tu peux rompre en visière
-                     à une femme delà cour.</said>
+                     toWhom="#Suzanne">– Oui.. je t'entends, tu veux que je te croie; eh bien, je te
+                     crois ; mais suis mon conseil, va chez <persName ref="#M_du_Bousquier">M. du
+                     Bousquier</persName> depuis cinq à six mois ? Eh bien, je ne
+                     te demande pas ce qui se passe entre vous ; mais je le connais, il
+                     a de l'amour-propre, il est vieux garçon, il est très
+                     riche, il a deux mille cinq cents livres de rente et
+                     n'en dépense pas huit cents. Si tu es aussi spirituelle que je le suppose,
+                     tu verras &Paris; à ses frais. Va, <rs type="person" ref="#Suzanne">
+                     ma petite biche</rs>, va l’entortiller, surtout sois déliée comme une soie ; a chaque parole
+                     fais un double tour et un noeud, il est homme à redouter le scandale,
+                     et s'il t'a donné lieu de le mettre sur la sellette… enfin, tu comprends, menace-le de t'adresser aux dames du
+                     bureau de charité. D’ailleurs, il est ambitieux ; eh bien, un
+                     homme peut arriver à tout par sa femme, n'es-tu donc pas assez belle, assez
+                     spirituelle pour faire la fortune de ton mari ? Hé, malepeste, tu peux rompre en visière
+                     à une femme delà cour.</said>
                </p>
                <p>
-                  <persName ref="#Suzanne">Suzanne</persName> illuminèe par les derniers mots du <rs
-                     type="person" ref="#chevalier_de_Valois_d_Alencon"
-                  >chevalier</rs>, grillait d’envie de courir chez <persName ref="#M_du_Bousquier"
-                     >M. du Bousquier</persName>. Pour ne pas sortir trop
-                     brusquement, elle questionna <rs type="person"
-                     ref="#chevalier_de_Valois_d_Alencon">le chevalier</rs> sur <placeName
-                     ref="#Paris">Paris</placeName>, en l'aidant à s'habiller. <rs type="person"
-                     ref="#chevalier_de_Valois_d_Alencon">Le chevalier</rs> devina l’effet de
-                     ses instructions, et favorisa la sortie de <persName ref="#Suzanne"
-                     >Suzanne</persName> en la priant de dire à <persName ref="#Cesarine"
-                     >Césarine</persName> de lui monter le chocolat que lui faisait <persName
-                     ref="#madame_Lardot">madame Lardot</persName> tous les matins.  <persName
-                     ref="#Suzanne">Suzanne</persName> s'esquiva pour se rendre chez <rs
-                     type="person" ref="#M_du_Bousquier">sa victime</rs>, dont voici la biographie. </p>
+                  <persName ref="#Suzanne">Suzanne</persName> illuminèe par les derniers mots du &chevalier;,
+                  grillait d’envie de courir chez <persName ref="#M_du_Bousquier">
+                  M. du Bousquier</persName>. Pour ne pas sortir trop
+                  brusquement, elle questionna le &chevalier; sur &Paris;, en l'aidant à s'habiller.
+                  Le &chevalier; devina l’effet de
+                  ses instructions, et favorisa la sortie de <persName ref="#Suzanne">
+                  Suzanne</persName> en la priant de dire à <persName ref="#Cesarine">
+                  Césarine</persName> de lui monter le chocolat que lui faisait
+                  <persName ref="#madame_Lardot">madame Lardot</persName> tous les matins.
+                  <persName ref="#Suzanne">Suzanne</persName> s'esquiva pour se rendre chez
+                  <rs type="person" ref="#M_du_Bousquier">sa victime</rs>, dont voici la biographie.
+               </p>
                <gap reason="editorial" extent="unknown" unit="paragraphs"/>
                <p>
                   <persName ref="#M_du_Bousquier">M. du Bousquier</persName> était un homme issu
                   d'une vieille famille d’<placeName ref="#Alençon">Alençon</placeName>, et qui
-                  tenait le milieu entre le bourgeois et le hobereau. Son père avait exercé les
+                  tenait le milieu entre le bourgeois et le hobereau. Son père avait exercé les
                   fonctions judiciaires de <roleName>Lieutenant-Criminel</roleName>. Se trouvant
                   sans ressources après la mort de son père, <persName ref="#M_du_Bousquier">M. du
-                     Bousquier</persName>, comme tous les gens ruinés de la province, avait été
-                  chercher fortune à <placeName ref="#Paris">Paris</placeName>. Au commencement de
-                  la révolution il s'était mis dans les affaires. En dépit des <orgName
-                     ref="#republicains">républicains</orgName> qui sont tous à
-                  cheval sur la probité révolutionnaire, les affaires de ce temps là n'étaient
-                  pas claires un <roleName>espion politique</roleName>, un
-                     <roleName>agioteur</roleName>, un <roleName>munitionnaire</roleName>, un homme
-                  qui faisait confisquer, d'accord avec le syndic de la commune, des
-                  biens d'émigrés pour les acheter et les revendre; un <roleName>ministre</roleName>
-                  et un <roleName>général</roleName> étaient également dans les affaires.  De 1773 à
-                  1799, <persName ref="#M_du_Bousquier">M. du Bousquier</persName> fut <roleName
-                     ref="#M_du_Bousquier">entrepreneur des vivres des armées françaises</roleName>.
-                  Il eut alors un magnifique hôtel, il fut <rs type="person" ref="#M_du_Bousquier"
-                     >un des matadors de la financ</rs>e, il fit des affaires de compte-à-demi avec
-                     <persName ref="#Ouvrard">Ouvrard</persName>, tint maison ouverte, et mena la
-                  vie scandaleuse du temps, une vie de <persName ref="#Cincinnatus"
-                     >Cincinnatus</persName>, à sacs de blé, à rations volées, à petites maisons
+                  Bousquier</persName>, comme tous les gens ruinés de la province, avait été
+                  chercher fortune à &Paris;. Au commencement de
+                  la révolution il s'était mis dans les affaires. En dépit des
+                  <orgName ref="#republicains">républicains</orgName> qui sont tous à
+                  cheval sur la probité révolutionnaire, les affaires de ce temps là n'étaient
+                  pas claires un <roleName>espion politique</roleName>, un
+                  <roleName>agioteur</roleName>, un <roleName>munitionnaire</roleName>, un homme
+                  qui faisait confisquer, d'accord avec le syndic de la commune, des
+                  biens d'émigrés pour les acheter et les revendre ; un <roleName>ministre</roleName>
+                  et un <roleName>général</roleName> étaient également dans les affaires. De 1773 à
+                  1799, <persName ref="#M_du_Bousquier">M. du Bousquier</persName> fut
+                  <roleName ref="#M_du_Bousquier">entrepreneur des vivres des armées françaises</roleName>.
+                  Il eut alors un magnifique hôtel, il fut <rs type="person" ref="#M_du_Bousquier">
+                  un des matadors de la financ</rs>e, il fit des affaires de compte-à-demi avec
+                  <persName ref="#Ouvrard">Ouvrard</persName>, tint maison ouverte, et mena la
+                  vie scandaleuse du temps, une vie de <persName ref="#Cincinnatus">
+                  Cincinnatus</persName>, à sacs de blé, à rations volées, à petites maisons
                   pleines de <roleName>maîtresses</roleName>, et où se donnaient de belles fêtes aux
                      <roleName>Directeurs de la République</roleName>. </p>
                <p>
                   <persName ref="#M_du_Bousquier">M. du Bousquier</persName> fut l'un des familiers
-                  de <placeName ref="#Barras">Barras</placeName>; il fut au mieux avec <persName
-                     ref="#Fouche">Fouché</persName>, très bien avec <persName ref="#Bernadotte"
-                     >Bernadotte</persName>,  et crut devenir
-                  <roleName>ministre</roleName> en se jetant a corps perdu dans le parti qui joua
+                  de <placeName ref="#Barras">Barras</placeName>; il fut au mieux avec
+                  <persName ref="#Fouche">Fouché</persName>, très bien avec <persName ref="#Bernadotte">
+                  Bernadotte</persName>, et crut devenir
+                  <roleName>ministre</roleName> en se jetant a corps perdu dans le parti qui joua
                   secrètement contre <persName ref="#Napoleon_Bonaparte">Bonaparte</persName>
                   jusqu'à <placeName ref="#Marengo">Marengo</placeName>. Il
-                  s'en fallut de la charge de <persName ref="#Kellermann">Kellermann</persName> et
-                  de la mort de <persName ref="#Desaix">Desaix</persName> que <persName
-                     ref="#M_du_Bousquier">du Bousquier</persName> ne fût un grand homme d'état,
-                  car il était <roleName ref="#M_du_Bousquier">l'un des chefs du gouvernement
-                     inédit</roleName>, que le bonheur de <persName ref="#Napoleon_Bonaparte"
-                     >Napoléon</persName> fit rentrer dans la boutique de 1793. La victoire
-                  opiniatrément surprise à <placeName ref="#Marengo">Marengo</placeName> fut
-                  la défaite de ce parti qui avait des proclamations tout imprimées pour revenir au
+                  s'en fallut de la charge de <persName ref="#Kellermann">Kellermann</persName> et
+                  de la mort de <persName ref="#Desaix">Desaix</persName> que
+                  <persName ref="#M_du_Bousquier">du Bousquier</persName> ne fût un grand homme d'état,
+                  car il était <roleName ref="#M_du_Bousquier">l'un des chefs du gouvernement
+                  inédit</roleName>, que le bonheur de <persName ref="#Napoleon_Bonaparte">
+                  Napoléon</persName> fit rentrer dans la boutique de 1793. La victoire
+                  opiniatrément surprise à <placeName ref="#Marengo">Marengo</placeName> fut
+                  la défaite de ce parti qui avait des proclamations tout imprimées pour revenir au
                   système de <orgName ref="#la_Montagne">la Montagne</orgName>, au
                   cas où le <persName ref="#Napoleon_Bonaparte">premier consul</persName> aurait
                   succombé. Dans la conviction où il était de l'impossibilité d'un triomphe,
-                     <persName ref="#M_du_Bousquier">du Bousquier</persName> joua la majeure partie
-                  do sa fortune à la baisse, et conserva deux courriers sur le champ de bataille :
-                  le premier partit au moment où <persName ref="#Melas"
-                  >Mélas</persName> était victorieux; mais dans la nuit, à quatre heures de
-                  distance, le second vint proclamer la défaite des <orgName 
-                     ref="#Autrichiens">Autrichiens</orgName>. <persName ref="#M_du_Bousquier">Du
-                     Bousquier</persName> maudit <persName ref="#Kellermann"
-                  >Kellermann</persName> et <persName ref="#Desaix">Desaix</persName>, il n'osa pas
+                  <persName ref="#M_du_Bousquier">du Bousquier</persName> joua la majeure partie
+                  do sa fortune à la baisse, et conserva deux courriers sur le champ de bataille :
+                  le premier partit au moment où <persName ref="#Melas">
+                  Mélas</persName> était victorieux ; mais dans la nuit, à quatre heures de
+                  distance, le second vint proclamer la défaite des <orgName ref="#Autrichiens">Autrichiens</orgName>.
+                  <persName ref="#M_du_Bousquier">Du Bousquier</persName> maudit <persName ref="#Kellermann">
+                  Kellermann</persName> et <persName ref="#Desaix">Desaix</persName>, il n'osa pas
                   maudire le <roleName ref="#Napoleon_Bonaparte">premier consul</roleName> qui lui
-                  devait des millions. Cette alternative de millions à gagner et de ruine réelle
-                  priva <roleName ref="#M_du_Bousquier">le fournisseur</roleName> de toutes ses facultés; il devint imbécile pendant
-                  plusieurs jours; il avait abusé de la vie par tant d'excès que ce coup de
-                  foudre le trouva sans force. La liquidation de ses créances sur l'état lui
-                  permettait de garder-quelques espérances; mais malgré ses présents corrupteurs, il
+                  devait des millions. Cette alternative de millions à gagner et de ruine réelle
+                  priva <roleName ref="#M_du_Bousquier">le fournisseur</roleName> de toutes ses facultés ;
+                  il devint imbécile pendant plusieurs jours; il avait abusé de la vie par tant d'excès que ce coup de
+                  foudre le trouva sans force. La liquidation de ses créances sur l'état lui
+                  permettait de garder-quelques espérances; mais malgré ses présents corrupteurs, il
                   rencontra la haine de <persName ref="#Napoleon_Bonaparte">Napoléon</persName>
                   contre les <roleName>fournisseurs</roleName> qui avaient joué sur sa défaite.
-                     <persName ref="#M_de_Fermon">M. de Fermon</persName>, si plaisamment
-                  nommé fermons la caisse, laissa <persName ref="#M_du_Bousquier">du
-                     Bousquier</persName> sans un sou. L'immoralité de sa vie privée, ses liaisons
-                  avec <persName ref="#Barras">Barras</persName> et <persName ref="#Bernadotte"
-                     >Bernadotte</persName> déplurent au <persName ref="#Napoleon_Bonaparte">premier
-                     consul</persName> encore plus que son jeu de bourse; il le raya de la liste des
-                     <roleName>receveurs-généraux</roleName> où, par un reste de crédit, il s'était
-                  fait porter pour <placeName ref="#Alençon">Alençon</placeName>. </p>
+                  <persName ref="#M_de_Fermon">M. de Fermon</persName>, si plaisamment
+                  nommé fermons la caisse, laissa <persName ref="#M_du_Bousquier">du
+                  Bousquier</persName> sans un sou. L'immoralité de sa vie privée, ses liaisons
+                  avec <persName ref="#Barras">Barras</persName> et <persName ref="#Bernadotte">
+                  Bernadotte</persName> déplurent au <persName ref="#Napoleon_Bonaparte">premier
+                  consul</persName> encore plus que son jeu de bourse; il le raya de la liste des
+                  <roleName>receveurs-généraux</roleName> où, par un reste de crédit, il s'était
+                  fait porter pour <placeName ref="#Alençon">Alençon</placeName>. </p>
                <gap reason="editorial" extent="unknown" unit="paragraphs"/>
                <p>Une fois mis sur le terrain de la galanterie, <roleName ref="M_du_Bousquier">le
-                     fournisseur</roleName> eut un souvenir de son beau temps, et il
-                  fit entendre un grognement d'adhésion. <persName ref="#Suzanne">Suzanne</persName>
-                  prit le sac et sortit, en se laissant baiser au front par <rs type="person"
-                     ref="#M_du_Bousquier">le vieux garçon</rs>, qui eut l'air de dire : <said
-                     direct="true" aloud="false">—C’est un droit qui me coûte cher.</said>
+                  fournisseur</roleName> eut un souvenir de son beau temps, et il
+                  fit entendre un grognement d'adhésion. <persName ref="#Suzanne">Suzanne</persName>
+                  prit le sac et sortit, en se laissant baiser au front par <rs type="person" ref="#M_du_Bousquier">
+                  le vieux garçon</rs>, qui eut l'air de dire : <said
+                  direct="true" aloud="false">—C’est un droit qui me coûte cher.</said>
                </p>
                <p>
-                  <persName ref="#Suzanne">Suzanne</persName> cacha le sac dans une espèce de
-                  gibecière en osier fin qu'elle avait au bras, et maudit l'avarice de <persName
-                     ref="#M_du_Bousquier">du Bousquier</persName> car elle voulait mille francs.
+                  <persName ref="#Suzanne">Suzanne</persName> cacha le sac dans une espèce de
+                  gibecière en osier fin qu'elle avait au bras, et maudit l'avarice de
+                  <persName ref="#M_du_Bousquier">du Bousquier</persName> car elle voulait mille francs.
                   Une fois endiablée par un désir, et quand elle a mis le pied dans une voie de
-                  fourberies, une fille va loin. Lorsque <rs type="person" ref="#Suzanne">la
-                     belle</rs> repasseuse fut dans <placeName ref="#rue_du_Bercail">la rue
-                     du Bercail</placeName>, elle songea que <orgName 
-                     ref="#la_Société_Maternelle"
-                     >la Société Maternelle</orgName> présidée par mademoiselle <persName
-                     ref="#mademoiselle_Cormon">Cormon</persName> lui compléterait peut-être la
-                  somme à laquelle-elle avait chiffré ses dépenses, et qui, pour une grisette
-                     d'<placeName ref="#Alençon">Alençon</placeName>, était considérable. Puis elle
-                  haïssait <persName ref="#M_du_Bousquier">du Bousquier</persName>; or, <rs
-                     type="person" ref="#M_du_Bousquier">le vieux garçon</rs> avait paru redouter
-                  la confidence de son prétendu crime à <persName ref="#madame_Granson">madame
-                     Granson</persName>; et <persName ref="#Suzanne">Suzanne</persName>, au risque
-                  de ne pas avoir un liard de <orgName  ref="#la_Société_Maternelle"
-                     >la Société Maternelle</orgName>,  voulut eu quittant <placeName ref="#Alençon"
-                     >Alençon</placeName> empêtrer <roleName ref="M_du_Bousquier">le
-                     fournisseur</roleName> dans les lianes inextricables d'un cancan de province,
-                  Il a toujours chez <rs type="person" ref="#Suzanne">la grisette</rs> un peu
-                  de l'esprit malfaisant du singe. <persName ref="#Suzanne">Suzanne</persName>
-                     entra donc chez <persName ref="#madame_Granson">madame Granson</persName>, en
-                  se composant un visage désolé. </p>
+                  fourberies, une fille va loin. Lorsque <rs type="person" ref="#Suzanne">la
+                  belle</rs> repasseuse fut dans <placeName ref="#rue_du_Bercail">la rue
+                  du Bercail</placeName>, elle songea que <orgName  ref="#la_Société_Maternelle">
+                  la Société Maternelle</orgName> présidée par mademoiselle
+                  <persName ref="#mademoiselle_Cormon">Cormon</persName> lui compléterait peut-être la
+                  somme à laquelle-elle avait chiffré ses dépenses, et qui, pour une grisette
+                  d'<placeName ref="#Alençon">Alençon</placeName>, était considérable. Puis elle
+                  haïssait <persName ref="#M_du_Bousquier">du Bousquier</persName>; or,
+                  <rs type="person" ref="#M_du_Bousquier">le vieux garçon</rs> avait paru redouter
+                  la confidence de son prétendu crime à <persName ref="#madame_Granson">madame
+                  Granson</persName>; et <persName ref="#Suzanne">Suzanne</persName>, au risque
+                  de ne pas avoir un liard de <orgName  ref="#la_Société_Maternelle">
+                  la Société Maternelle</orgName>,  voulut eu quittant <placeName ref="#Alençon">
+                  Alençon</placeName> empêtrer <roleName ref="M_du_Bousquier">le
+                  fournisseur</roleName> dans les lianes inextricables d'un cancan de province,
+                  Il a toujours chez <rs type="person" ref="#Suzanne">la grisette</rs> un peu
+                  de l'esprit malfaisant du singe. <persName ref="#Suzanne">Suzanne</persName>
+                  entra donc chez <persName ref="#madame_Granson">madame Granson</persName>, en
+                  se composant un visage désolé. </p>
             </div>
          </div>
       </body>
