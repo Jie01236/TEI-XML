@@ -1,3 +1,11 @@
+<!--
+COMMENTAIRE
+Projet éditorial bien mené avec un travail de balisage détaillé, présentant cependant quelques irrégularités
+On aurait aimé un peu plus de détails sur les différentes sources utilisées (numéro de La Presse)
+Les règles de validation proposent des éléments qui n'avaient pas été vu en cours bravo !
+Toutefois, les éléments ajoutés (org, orgName, etc.) auraient dû être inclus dans le module namesdates
+-->
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0"
    xmlns:s="http://purl.oclc.org/dsdl/schematron" xml:lang="en">
    <teiHeader>
@@ -8,7 +16,7 @@
             <title type="sub">Schéma créé avec Oddbyexample</title>
          </titleStmt>
          <publicationStmt>
-            <p>Edition encodée par Jie FAN, d'après Honoré de Balzac, La vieille fille. Cette
+            <p>Édition encodée par Jie FAN, d'après Honoré de Balzac, La vieille fille. Cette
                édition électronique est basée sur les épisodes consécutifs de "La vieille fille"
                publiés dans "La Presse" les <date>23, 24 et 25 octobre 1836</date>, respectivement
                sous les numéros 103, 104 et 105 de la publication. Ces versions numérisées sont
@@ -646,14 +654,16 @@
                <classRef key="model.physDescPart"/>
                <!--Checking module namesdates-->
                <classRef key="att.datable.iso"/>
-               
-               <moduleRef key="namesdates"
-                  include="persName surname forename placeName country region affiliation birth death education listPerson listPlace listRelation occupation person place relation"/>     
+
+               <!--CORRECTION ajout de org listOrg orgName roleName-->
+               <moduleRef key="namesdates" include="persName surname forename placeName country region affiliation birth
+               death education listPerson listPlace listRelation occupation person place relation org listOrg orgName roleName"/>
                <elementSpec ident="persName" mode="change">
                   <constraintSpec ident="refPersonneText" scheme="schematron">
                      <constraint>
                         <s:pattern>
-                           <s:rule context="tei:TEI/tei:text/descendant::tei:persName">
+                           <!-- OK -->
+                           <s:rule context="tei:TEI/tei:text//tei:persName">
                               <s:assert test="@ref"> Les éléments &lt;persName&gt; situés dans
                                  &lt;text&gt; doivent avoir l'attribut 'ref'. </s:assert>
                            </s:rule>
@@ -884,30 +894,32 @@
                      <attDef ident="cert" mode="delete"/>
                   </attList>
                </elementSpec>
-              
+
+               <!--CORRECTION Plutôt que l'ajouter, il fallait l'inclure dans le module namesdate-->
                <!-- ajouter <elementSpec ident="org">. L'attribut 'ident' est utilisé pour spécifier le nom de l'élément, tandis que l'attribut 'mode' indique l'action à effectuer sur cet élément, comme par exemple 'add' pour ajouter une nouvelle définition.-->
-               <elementSpec ident="org" mode="add" module="namesdates" xmlns="http://www.tei-c.org/ns/1.0">
+               <elementSpec ident="org" mode="change">
                   <!-- Une règle contraignant l'enchaînement de certains éléments (<content>) -->
+                  <!--desc est davantage utilisé pour définir l'élément plus que pour documenter la règle du content-->
                   <desc>Cette règle définit la structure interne de l'élément <code>org</code>, en
                      spécifiant que chaque élément <code>org</code> doit contenir un et un seul
                      élément <code>orgName</code> et un et un seul élément <code>desc</code>.</desc>      
-                  <classes>
+                  <!--<classes>
                         <memberOf key="model.personLike"/>               
-                  </classes>
+                  </classes>-->
                   <content>
+                     <!-- OK -->
                      <elementRef key="orgName" minOccurs="1" maxOccurs="1"/>
                      <elementRef key="desc" minOccurs="1" maxOccurs="1"/>
                   </content>
                   <attList>
-                     <!-- Une regle contraignant l'usage d'un attribut et sa ou ses valeurs ( <attDef>） -->
-                     <attDef ident="xml:id" usage="req"/><!-- l'attribut "xml:id"est requis -->
-                     <attDef ident="type" usage="req"> <!-- l'attribut "type" est requis -->
-                        <desc>Cette règle spécifie que l'attribut <code>type</code> est obligatoire
-                           pour chaque élément <code>org</code> et limite ses valeurs possibles à
-                              <code>charity</code>, <code>political</code>, ou
-                           <code>military</code>, afin de catégoriser clairement le type
+                     <!-- Une regle contraignant l'usage d'un attribut et sa ou ses valeurs (<attDef>) -->
+                     <attDef ident="xml:id" usage="req" mode="change"/><!-- l'attribut "xml:id"mest requis -->
+                     <attDef ident="type" usage="req" mode="change"> <!-- l'attribut "type" est requis -->
+                        <desc>Cette règle spécifie que l'attribut &lt;type&gt; est obligatoire
+                           pour chaque élément &lt;org&gt; et limite ses valeurs possibles à
+                           "charity", "political" ou "military", afin de catégoriser clairement le type
                            d'organisation décrite.</desc>
-                        <valList type="closed">
+                        <valList mode="add" type="closed"> <!-- Oubli du mode "add" -->
                            <valItem ident="charity"/>
                            <valItem ident="political"/>
                            <valItem ident="military"/>
@@ -915,16 +927,17 @@
                      </attDef>
                   </attList>
                </elementSpec>
-               
+
+               <!--CORRECTION Plutôt que l'ajouter, il fallait l'inclure dans le module namesdate-->
                <!-- ajouter <elementSpec ident="orgName">  -->
-               <elementSpec ident="orgName" mode="add" module="namesdates" xmlns="http://www.tei-c.org/ns/1.0">
+               <elementSpec ident="orgName" mode="change">
                   <desc>noms des organisations</desc>
-                  <classes>
+                  <!--<classes>
                      <memberOf key="model.nameLike.agent"/>
                   </classes>
                   <content>
                      <dataRef key="teidata.text"/>
-                  </content>
+                  </content>-->
                   <attList>
                      <attDef ident="facs" mode="delete"/>
                      <attDef ident="source" mode="delete"/>
@@ -934,20 +947,21 @@
                         </valList>
                      </attDef>
                      <attDef ident="key" mode="delete"/>
-                     <attDef ident="ref" usage="opt"/>                 
+                     <attDef ident="ref" usage="opt" mode="change"/>
                   </attList>
                </elementSpec>
-               
+
+               <!--CORRECTION Plutôt que l'ajouter, il fallait l'inclure dans le module namesdate-->
                <!-- ajouter <elementSpec ident="listOrg">  -->
-               <elementSpec ident="listOrg" mode="add" module="namesdates" xmlns="http://www.tei-c.org/ns/1.0">
+               <elementSpec ident="listOrg" mode="change">
                   <desc>liste des organisation</desc>
-                  <classes>
+                  <!--<classes>
                      <memberOf key="model.listLike"/>
                      <memberOf key="model.orgPart"/>
                   </classes>
                   <content>
                      <elementRef key="org" minOccurs="1"/>
-                  </content>
+                  </content>-->
                   <attList>
                      <attDef ident="facs" mode="delete"/>
                      <attDef ident="cert" mode="delete"/>
@@ -960,15 +974,16 @@
                   </attList>
                </elementSpec>   
                
+               <!--CORRECTION Plutôt que l'ajouter, il fallait l'inclure dans le module namesdate-->
                <!-- ajouter <elementSpec ident="roleName">  -->
-               <elementSpec ident="roleName" mode="add" module="namesdates" xmlns="http://www.tei-c.org/ns/1.0">
+               <elementSpec ident="roleName" mode="change">
                   <desc>roleName est utilisé pour marquer les positions</desc>
-                  <classes>
+                  <!--<classes>
                      <memberOf key="model.persNamePart"/>
                   </classes>
                   <content>
                      <dataRef key="teidata.text"/>
-                  </content>               
+                  </content>-->
                   <attList>
                      <attDef ident="facs" mode="delete"/>
                      <attDef ident="source" mode="delete"/>
@@ -978,22 +993,23 @@
                         </valList>
                      </attDef>
                      <attDef ident="key" mode="delete"/>
-                     <attDef ident="ref" usage="opt"/>                
+                     <attDef ident="ref" usage="opt" mode="change"/>
                   </attList>
                </elementSpec> 
                
                <elementSpec ident="place" mode="change">
-                  <!-- Une règle contraignant la valeur d'un attribut ou l'usage d'un élément ou d'un attribut en fonction de son
-environnement ( <constraint> + ‹s:rule> ) -->
+                  <!-- Une règle contraignant la valeur d'un attribut ou l'usage d'un élément ou
+                  d'un attribut en fonction de son environnement ( <constraint> + ‹s:rule> ) -->
                   <constraintSpec ident="contraintesPlaceInTeiheader" scheme="schematron">
                      <desc>Assure que les éléments &lt;place&gt; situés dans &lt;listPlace&gt;
                         doivent obligatoirement avoir les attributs 'xml:id' et 'type'.</desc>
                      <constraint>
-                        <s:rule context="tei:TEI/tei:teiHeader/descendant::tei:place">
+                        <s:rule context="tei:TEI/tei:teiHeader//tei:place">
+                           <!-- OK -->
                            <s:assert test="@xml:id">Les éléments &lt;place&gt; situés dans
-                              &lt;listPlace&gt; de &lt;ProfileDesc&gt; doivent avoir l'attribut 'xml:id'.</s:assert>
+                              &lt;listPlace&gt; de &lt;profileDesc&gt; doivent avoir l'attribut 'xml:id'.</s:assert>
                            <s:assert test="@type">Les éléments &lt;place&gt; situés dans
-                              &lt;listPlace&gt;  de &lt;ProfileDesc&gt; doivent avoir l'attribut 'type'.</s:assert>
+                              &lt;listPlace&gt; de &lt;profileDesc&gt; doivent avoir l'attribut 'type'.</s:assert>
                         </s:rule>
                      </constraint>
                   </constraintSpec>
@@ -1242,6 +1258,7 @@ environnement ( <constraint> + ‹s:rule> ) -->
                <elementSpec ident="choice" mode="change">
                   <!-- Une règle contraignant l'enchaînement de certains éléments (<content>) -->
                   <content> 
+                     <!--OK-->
                      <sequence preserveOrder="true">
                         <elementRef key="orig" minOccurs="1" maxOccurs="1"/>
                         <elementRef key="reg" minOccurs="1" maxOccurs="1"/>
@@ -1303,7 +1320,8 @@ environnement ( <constraint> + ‹s:rule> ) -->
                      <attDef ident="cert" mode="delete"/>
                      <attDef ident="role" mode="delete"/>
                      <attDef ident="key" mode="delete"/>
-                     <!-- Une regle contraignant l'usage d'un attribut et sa ou ses valeurs ( <attDef>） -->
+                     <!-- Une regle contraignant l'usage d'un attribut et sa ou ses valeurs (<attDef>) -->
+                     <!--OK-->
                      <attDef ident="type" mode="change" usage="req">
                         <valList mode="add" type="closed">
                            <valItem ident="person"/>
